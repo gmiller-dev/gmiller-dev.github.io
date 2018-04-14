@@ -1,0 +1,9 @@
+
+$max-cols : 12;
+$col-size: percentage(1/12);
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

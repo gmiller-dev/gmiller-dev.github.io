@@ -1,0 +1,35 @@
+
+.navbar {
+    width: $max-cols * $col-size;
+    display: flex;
+    background-color:  cadetblue; 
+    justify-content: flex-end;
+    box-shadow: 0px 1px 4px lighten(black, 35%);
+}
+
+
+.navbar__item {
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5em;
+    &-left {
+        margin-right: auto;
+    }
+
+    &-active, &:hover {
+        background-color: darkcyan;
+    }
+}
+
+
+@media all and (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-content: center;
+    }
+    .navbar__item {
+        text-align: center;
+        width:100%;
+        margin: 0px;
+    }
+}
