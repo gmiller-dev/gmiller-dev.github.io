@@ -1,17 +1,26 @@
 
+
+
 .jumbotron {
     display: flex;
     width: $col-size * $max-cols;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: $nav-bar-offset;
     //background-color: azure;
     height: 300px;
 }
 
+@media all and (max-width: 800px) {
+    .jumbotron {
+        margin-top: $vertical-nav-bar-offset;
+    }
+}
+
 .logo {
     border: 1px solid black;
-    background-color: cadetblue;
+    background-color: $color-primary;
     border-radius: 50%;
     width: 90px;
     height: 90px;

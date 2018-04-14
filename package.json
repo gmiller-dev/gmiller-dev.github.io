@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "scss": "node-sass --watch ./common.blocks/styles.scss ./styles.css"
+    "scss": "node-sass --watch ./common.blocks/styles.scss ./css/styles.css"
   },
   "dependencies": {
     "node-sass": "^4.8.3"

@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Geoff Miller: Software Developer</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="grid">
+  <div id="root" class="grid">
    <!-- Navbar --> 
     <div class="navbar">
       <a href="#thing" class="navbar__item navbar__item-active navbar__item-left text-white"> Geoff Miller: Software Engineer</a>
@@ -18,19 +18,92 @@
     </div>
 
     <!-- Jumbotron -->
-    <div class="jumbotron">
+    <div id="about" class="jumbotron">
       <div class="logo"></div>
       <h3>Hi I'm Geoff Miller</h3>
       <p> I believe in building quality software</p>
-      <a href="#projects" class="btn btn-primary">Projects</a>
+      <!--<a href="#projects" class="btn btn-primary">Projects</a>-->
     </div>
 
     <!-- Projects -->
-    <div class="projcets">
-      <div class="card">
+    <div id="projects" class="projects">
 
+      <div class="card">
+        <div class="card__content">
+          <p>
+            <span class="card__title">Project Title</span>
+            This is a simple project card. It is meant to show a simple description
+            and provide links to the project and its source code.
+          </p>
+        </div>
+        <div class="card__action">
+          <a class="btn btn-primary">Project</a>
+          <a class="btn btn-primary">Source</a>
+        </div>
       </div> 
+
+      <div class="card">
+        <div class="card__content">
+          <p>
+            <span class="card__title">Project Title</span>
+            This is a simple project card. It is meant to show a simple description
+            and provide links to the project and its source code.
+          </p>
+        </div>
+        <div class="card__action">
+          <a class="btn btn-primary">Project</a>
+          <a class="btn btn-primary">Source</a>
+        </div>
+      </div> 
+
+      <div class="card">
+        <div class="card__content">
+          <p>
+            <span class="card__title">Project Title</span>
+            This is a simple project card. It is meant to show a simple description
+            and provide links to the project and its source code.
+          </p>
+        </div>
+        <div class="card__action">
+          <a class="btn btn-primary">Project</a>
+          <a class="btn btn-primary">Source</a>
+        </div>
+      </div> 
+
+      <div class="card">
+        <div class="card__content">
+          <p>
+            <span class="card__title">Project Title</span>
+            This is a simple project card. It is meant to show a simple description
+            and provide links to the project and its source code.
+          </p>
+        </div>
+        <div class="card__action">
+          <a class="btn btn-primary">Project</a>
+          <a class="btn btn-primary">Source</a>
+        </div>
+      </div> 
+
     </div>
+
+    <!-- Contant Me -->
+    <div id="contanct text-white" class="contact">
+        <form class="form-big" action='#'>
+          <div class="input-group" >
+            <input type='email' class="form-control" />
+            <label class="text-white"> Email </label>
+          </div>
+          
+          <div class="input-group" >
+            <textarea class="form-control"></textarea>
+            <label class="text-white"> Message </label>
+          </div>
+          
+          <button class="btn btn-secondary"> Submit </button>
+        </from>
+    </div>
+
   </div>
+  <script src="js/app.js"></script>
 </body>
 </html>

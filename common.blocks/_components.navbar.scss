@@ -1,9 +1,13 @@
+$nav-bar-offset: 60px;
+$vertical-nav-bar-offset: 236px;
 
 .navbar {
+    position: fixed;
     width: $max-cols * $col-size;
     display: flex;
-    background-color:  cadetblue; 
+    background-color:  $color-primary; 
     justify-content: flex-end;
+    z-index: 999;
     box-shadow: 0px 1px 4px lighten(black, 35%);
 }
 
