@@ -1,5 +1,9 @@
-$nav-bar-offset: 60px;
+$nav-bar-offset: 90px;
 $vertical-nav-bar-offset: 236px;
+
+.navbar-offset {
+    margin-top: $nav-bar-offset;
+}
 
 .navbar {
     position: fixed;
@@ -15,25 +19,62 @@ $vertical-nav-bar-offset: 236px;
 .navbar__item {
     text-decoration: none;
     color: inherit;
-    padding: 1.5em;
+    padding: 1.2rem;
     &-left {
         margin-right: auto;
     }
 
     &-active, &:hover {
-        background-color: darkcyan;
+        border-bottom: 0.2rem solid $color-accent;
     }
 }
 
+.brand {
+    padding: 1.3rem;
+    color: inherit;
+    background-color: darkcyan;
+}
 
-@media all and (max-width: 800px) {
+.navbar__icon {
+    display: none;
+}
+
+.navbar__items {
+    display: flex;
+}
+
+
+@media all and (max-width: $phone-width) {
     .navbar {
-        flex-direction: column;
         align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
+
+    .navbar__icon {
+      display: block;
+      padding: 1.5rem;
+    }
+
     .navbar__item {
-        text-align: center;
-        width:100%;
-        margin: 0px;
+      text-align: center;
+      flex-basis: 1;
+      margin: 0px;
+    }
+
+    .navbar__items {
+      &-collapse {
+          display: none;
+      }
+    }
+
+    .brand {
+       flex-grow: 1;
+    }
+
+    .navbar__item {
+        &-active {
+            display: inherit;
+        }
     }
 }

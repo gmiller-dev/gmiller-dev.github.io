@@ -10,17 +10,22 @@
 <body>
   <div id="root" class="grid">
    <!-- Navbar --> 
-    <div class="navbar">
-      <a href="#thing" class="navbar__item navbar__item-active navbar__item-left text-white"> Geoff Miller: Software Engineer</a>
-      <a href="#thing" class="navbar__item text-white"> About </a>
-      <a href="#thing" class="navbar__item text-white"> Projcets </a>
-      <a href="#thing" class="navbar__item text-white"> Contact Me </a>
+    <div class="navbar text-white">
+      <span href="#thing" class="brand navbar__item-left"> Geoff Miller: Software Engineer</span>
+      <span id="navigation_toggle" class="navbar__icon">&#9776</span>
+
+      <div id="navigation" class="navbar__items navbar__items-collapse">
+        <a href="#thing" class="navbar__item navbar__item-active"> Home </a>
+        <a href="#thing" class="navbar__item"> About </a>
+        <a href="#thing" class="navbar__item"> Projcets </a>
+        <a href="#thing" class="navbar__item"> Contact Me </a>
+      </div>
     </div>
 
     <!-- Jumbotron -->
-    <div id="about" class="jumbotron">
+    <div id="about" class="jumbotron navbar-offset">
       <div class="logo"></div>
-      <h3>Hi I'm Geoff Miller</h3>
+      <h1>Hi I'm Geoff Miller</h1>
       <p> I believe in building quality software</p>
       <!--<a href="#projects" class="btn btn-primary">Projects</a>-->
     </div>
@@ -104,6 +109,7 @@
     </div>
 
   </div>
+  
   <script src="js/app.js"></script>
 </body>
 </html>
