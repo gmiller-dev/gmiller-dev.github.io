@@ -1,21 +1,34 @@
-const has_value = obj => obj.value && obj.value.length > 0
+// Form Bindings
+const hasValue = obj => obj.value && obj.value.length > 0
 
-const apply_filled_out = cntrl => has_value(cntrl)
-                         ? cntrl.classList.add('filled-out')
-                         : cntrl.classList.remove('filled-out')
+const applyFilledOut = cntrl =>
+  hasValue(cntrl)
+  ? cntrl.classList.add('filled-out')
+  : cntrl.classList.remove('filled-out')
 
-const formCntrls = Array.from(document.getElementsByClassName('form-control'));
+const formCntrls = Array.from(document.getElementsByClassName('form-control'))
 
-formCntrls.forEach( cntrl =>{
-  apply_filled_out(cntrl)
-  cntrl.addEventListener('focusout', () => apply_filled_out(cntrl))
+formCntrls.forEach(cntrl => {
+  applyFilledOut(cntrl)
+  cntrl.addEventListener('focusout', () => applyFilledOut(cntrl))
 })
 
-const navbar_toggle = document.getElementById('navigation_toggle');
+// NavBar Bindings
+const navbarToggle = document.getElementById('navigation_toggle')
 const navigation = document.getElementById('navigation')
 
-
-navbar_toggle.onclick = () => navigation.classList.contains("navbar__items-collapse")
+navbarToggle.onclick = () => navigation.classList.contains('navbar__items-collapse')
   ? navigation.classList.remove('navbar__items-collapse')
   : navigation.classList.add('navbar__items-collapse')
 
+const getActiveNavBarItem = () => document.getElementsByClassName('navbar__item-active')[0]
+
+const navBarItems = Array.from(document.getElementsByClassName('navbar__item'))
+
+navBarItems.forEach(item => {
+  item.onclick = () => {
+    const activeItem = getActiveNavBarItem()
+    activeItem.classList.remove('navbar__item-active')
+    item.classList.add('navbar__item-active')
+  }
+})
